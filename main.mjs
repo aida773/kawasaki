@@ -19,7 +19,7 @@ app.get("/", async (request, response) => {
 });
 
 app.post("/send", async (request, response) => {
-  await prisma.post.create({
+  await prisma.Post.create({
     data: { message: request.body.message },
   });
   response.redirect("/");
